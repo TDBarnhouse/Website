@@ -1,2 +1,2 @@
 # Website
-My personal website for my portfolio.
+Personal website for my portfolio.
