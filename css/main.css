@@ -1,0 +1,139 @@
+* { padding: 0; margin: 0; }
+
+:root {
+    --base-color: #d2dae2;
+    --secondary-color: #ff0000;
+}
+
+body {
+    background-color: #1e272e;
+    font-family: monospace;
+    color: var(--base-color);
+    overflow: hidden;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../images/IMG_2264.JPG);
+    background-size: cover;
+    background-position: top-center;
+    opacity: 0.15;
+    filter: blur(7px);
+}
+
+.social-media-logo:hover, .navbar-link:hover, .navbar-link.selected, .red-detail {
+    color: var(--secondary-color);
+}
+
+/* Home */
+#main-header {
+    font-size: 6vh;
+    text-align: center;
+}
+
+#sub-header {
+    font-size: 2vh;
+    text-align: center;
+
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* Social Media */
+#social-media-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-logo {
+    color: var(--base-color);
+    font-size: 3vh;
+    transition: 0.2s ease-in;
+}
+
+.social-media-item {
+    list-style: none;
+    margin: 0 20px;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+}
+
+@media screen and (max-width: 650px) {
+
+    nav, #nav-top, #navbar-menu, .navbar-link {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #navbar-menu {
+        text-align: center;
+    }
+
+    .navbar-item {
+        margin: 5vh 2vh 0 2vh;
+    }
+
+    footer {
+        padding: 0;
+        margin: 0;
+    }
+
+    #social-media-menu {
+        text-align: center;
+    }
+
+    .social-media-item {
+        margin: 0 2vh 5vh 2vh;
+    }
+}
+
+
+nav {
+    margin-top: -30px;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  #navbar-menu {
+    padding-right: 5vh;
+    list-style-type: none;
+  }
+  
+  .navbar-item {
+    display: inline-block;
+    margin: 5vh 5vh 0 0;
+  }
+  
+  .navbar-link {
+    font-size: 1.5vh;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+  }
+
+ 
