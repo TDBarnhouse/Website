@@ -1,0 +1,9 @@
+{
+    "name": "Tristan Barnhouse",
+    "short_name": "Tristan",
+    "start_url": "/",
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
