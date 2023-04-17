@@ -55,6 +55,11 @@ nav {
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s ease-in;
+    color: var(--base-color);
+}
+
+.navbar-link:visited {
+    color: var(--base-color);
 }
 
 /* Home */

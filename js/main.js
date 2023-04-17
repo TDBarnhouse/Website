@@ -1,7 +1,21 @@
+
+let characterIndex = 0;
+
+let titleNames = ["t", "tr", "tri", "tris", "trist", "trista", "tristan", "trista", "trist", "tris", "tri", "tr", "t"];
+
+window.updateTitleName = function () {
+    document.getElementsByTagName("title")[0].innerHTML = titleNames[characterIndex++ % titleNames.length];
+}
+
+setInterval(() => {
+    window.updateTitleName()
+}, 500);
+
 $(document).ready(function(){
     let currentPage = "HOME";
     let currentNavLink = $("#navbar-menu").children().first().children()[0];
 
+    $("#TERMINAL").hide();
     $("#ABOUT").hide();
     $("#PORTFOLIO").hide();
     $("#CONTACT").hide();
@@ -17,18 +31,4 @@ $(document).ready(function(){
         
         currentNavLink = this;
     })
-
-    let characterIndex = 0;
-
-    let titleNames = ["t", "tr", "tri", "tris", "trist", "trista", "tristan", "trista", "trist", "tris", "tri", "tr", "t"];
-
-    window.updateTitleName = function () {
-        document.getElementsByTagName("title")[0].innerHTML = titleNames[characterIndex++ % titleNames.length];
-    }
-
-    setInterval(() => {
-        window.updateTitleName()
-    }, 500);
-    
 });
-
