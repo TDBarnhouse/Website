@@ -35,14 +35,16 @@ function enterKey(e) {
       pwdSecret = true;
     }
     if (pwdSecret && e.keyCode == 13) {
-      loopLines(secret, "margin", 120);
+      addLine("Authentication successful.", "success", 0);
+      addLine(" ", 0);
+      loopLines(secret, "", 120);
       command.innerHTML = "";
       textarea.value = "";
       pwdSecret = false;
       pwSecret = false;
       liner.classList.remove("password");
     } else if (e.keyCode == 13) {
-      addLine("Incorrect password.", "error", 0);
+      addLine("Authentication failed.", "error", 0);
       addLine(" ", 0);
       command.innerHTML = "";
       textarea.value = "";
@@ -58,14 +60,16 @@ function enterKey(e) {
       pwdContact = true;
     }
     if (pwdContact && e.keyCode == 13) {
-      loopLines(contact, "margin", 120);
+      addLine("Authentication successful.", "success", 0);
+      addLine(" ", 0);
+      loopLines(contact, "", 120);
       command.innerHTML = "";
       textarea.value = "";
       pwdContact = false;
       pwContact = false;
       liner.classList.remove("password");
     } else if (e.keyCode == 13) {
-      addLine("Incorrect password.", "error", 0);
+      addLine("Authentication failed.", "error", 0);
       addLine(" ", 0);
       command.innerHTML = "";
       textarea.value = "";
@@ -109,9 +113,10 @@ function commander(cmd) {
       loopLines(whois, "margin", 80);
       break;
     case "whoami":
-      loopLines(whoami, "margin", 80);
+      addLine("tristan.barnhouse", "margin", 0);
+      addLine(" ", 0);      
       break;
-    case "sudo su":
+    case "cat flag.txt":
       addLine("Gotcha! ;)", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
@@ -144,6 +149,69 @@ function commander(cmd) {
       break;
     case "banner":
       loopLines(banner, "", 80);
+      break;
+    case "ls":
+      addLine("<span class=\"index\">Home  Terminal  About  Portfolio  Contact", "error", 0);
+      addLine(" ", 0);
+      break;
+    case "cd":
+      addLine("<span class=\"index\">cd: You need a directory.", "error", 0);
+      addLine(" ", 0);
+      break;
+    case "cat":
+      addLine("<span class=\"index\">cat: You need a file.", "error", 0);
+      addLine(" ", 0);
+      break;
+    case "cat password.txt":
+      addLine("Be4st1e", "margin", 0);
+      addLine(" ", 0);
+      break;
+    case "exit":
+      addLine("Closing the tristan.barnhouse framework console...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+    case "whois":
+      addLine("<span class=\"index\">whois: You need a user ID.", "error", 0);
+      addLine(" ", 0);
+      break;
+    case "cd home":
+      addLine("Changing directory into Home...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+    case "cd terminal":
+      addLine("Changing directory into Terminal...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+    case "cd about":
+      addLine("Changing directory into About...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+      break;
+    case "cd portfolio":
+      addLine("Changing directory into Portfolio...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+    case "cd contact":
+      addLine("Changing directory into Contact...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
       break;
     default:
       addLine("<span class=\"index\">Command not found.", "error", 0);

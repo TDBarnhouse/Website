@@ -19,11 +19,11 @@ body::before{
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-image: url(../images/image03.JPG);
+    background-image: url(../images/background.png);
     background-size: cover;
     background-position: top-center;
     opacity: 0.15;
-    filter: blur(7px);
+    filter: blur(2px);
 }
 
 .social-media-logo:hover, .navbar-link:hover, .navbar-link.selected, .red-detail {

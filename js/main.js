@@ -1,4 +1,3 @@
-
 let characterIndex = 0;
 
 let titleNames = ["t", "tr", "tri", "tris", "trist", "trista", "tristan", "trista", "trist", "tris", "tri", "tr", "t"];
