@@ -30,7 +30,15 @@ body::before{
     color: var(--secondary-color);
 }
 
-/* Home */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* Navbar */
 nav {
     margin-top: -30px;
     position: fixed;
@@ -71,15 +79,18 @@ nav {
 #sub-header {
     font-size: 2vh;
     text-align: center;
-
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+/* About */
+#about-header {
+    font-size: 4vh;
+    text-align: center;
+}
+
+#about-text {
+    width: 100%;
+    font-size: 2vh;
+    text-align: center;
 }
 
 /* Social Media */
