@@ -134,7 +134,8 @@ body {
   }
   .inherit,
   a {
-    color: #DCDCCC;
+    color: #73ABAD;
+    text-shadow: 0 0 5px #73ABAD; 
   }
   a {
     text-decoration: inherit;
@@ -142,6 +143,7 @@ body {
   a:hover {
     background: #DCDCCC;
     color: #000000;
+    text-shadow: 0 0 5px #DCDCCC; 
   }
   a:focus {
     outline: 0;
