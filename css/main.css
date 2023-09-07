@@ -93,6 +93,50 @@ nav {
     text-align: center;
 }
 
+/* Portfolio */
+#portfolio-header {
+    font-size: 4vh;
+    text-align: center;
+}
+
+.portfolio-items {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolio-items figure {
+    margin: auto;
+    width: 250px;
+    text-align: center;
+}
+
+.portfolio-items img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    box-shadow: red 0 0 10px;
+    border: 1px solid red;
+}
+
+#fig-header {
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.portfolio-items figcaption {
+    width: 100%;
+    font-size: 1.75vh;
+    text-align: center;
+    display: none;
+    margin-top: 10px;
+}
+
+.portfolio-items figcaption.visible {
+    display: block;
+}
+
 /* Social Media */
 #social-media-menu {
     display: flex;
