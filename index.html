@@ -94,6 +94,8 @@
                 <h2 id="portfolio-header">PORTFOLIO</h2>
                 <section class="portfolio-items">  
                     <figure>
+                        <h2 id="img-header">Unleash the Beast</h2><br>
+
                         <img id="portfolio-image" src="../images/image03.jpg" alt="Unleash the Beast">
                         
                         <figcaption>
@@ -129,6 +131,8 @@
                         </figcaption>
                     </figure>
                     <figure>  
+                        <h2 id="img-header">Mini-Beastie</h2><br>
+
                         <img src="../images/image03.jpg" alt="Mini-Beastie">
                         
                         <figcaption>
@@ -144,6 +148,8 @@
                         </figcaption>
                     </figure>
                     <figure>
+                        <h2 id="img-header">Mini-DJ-Beastie</h2><br>
+
                         <img src="../images/image03.jpg" alt="Mini-DJ-Beastie">
                        
                         <figcaption>
@@ -159,6 +165,8 @@
                         </figcaption>
                     </figure>
                     <figure>
+                        <h2 id="img-header">Website</h2><br>
+
                         <img src="../images/image03.jpg" alt="Website">
                         
                         <figcaption>
@@ -217,25 +225,29 @@
             const portfolioHeader = document.getElementById('portfolio-header');
             const portfolioImages = document.querySelectorAll('.portfolio-items img');
             const captions = document.querySelectorAll('.portfolio-items figcaption');
-        
-            const captionVisibility = Array.from(captions).map(caption => false);
-        
+
+            let openIndex = -1; // Track the index of the currently open image, initialize as -1 (no image open)
+
             function toggleVisibility(index) {
-                captions[index].classList.toggle('visible');
-                captionVisibility[index] = !captionVisibility[index];
-        
-                const allHidden = captionVisibility.every(hidden => !hidden);
-        
+                if (openIndex !== -1 && openIndex !== index) {
+                    // If there's a currently open image and it's not the same as the new one
+                    captions[openIndex].classList.remove('visible'); // Close the previously open image
+                }
+
+                captions[index].classList.toggle('visible'); // Open or close the clicked image
+                openIndex = openIndex === index ? -1 : index; // Update the openIndex
+
+                const allHidden = openIndex === -1; // Check if no image is open
                 portfolioHeader.style.display = allHidden ? 'block' : 'none';
             }
-        
+
             portfolioImages.forEach((image, index) => {
                 image.addEventListener('click', () => {
                     toggleVisibility(index);
                 });
             });
-        </script>    
-        
+        </script>
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>

@@ -28,7 +28,7 @@ body::before{
 
 .social-media-logo:hover, .navbar-link:hover, .navbar-link.selected, .red-detail {
     color: var(--secondary-color);
-}
+}    
 
 .center {
     position: absolute;
@@ -120,14 +120,20 @@ nav {
     border: 1px solid red;
 }
 
-#fig-header {
+#img-header {
     font-size: 2.5vh;
     text-align: center;
 }
 
+#fig-header {
+    font-size: 2vh;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
 .portfolio-items figcaption {
     width: 100%;
-    font-size: 1.75vh;
+    font-size: 1.5vh;
     text-align: center;
     display: none;
     margin-top: 10px;
