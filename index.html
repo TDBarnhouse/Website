@@ -96,7 +96,7 @@
                     <figure>
                         <h2 id="img-header">Unleash the Beast</h2><br>
 
-                        <img id="portfolio-image" src="../images/image03.jpg" alt="Unleash the Beast">
+                        <img id="portfolio-image" src="../images/blackops2.png" alt="Unleash the Beast">
                         
                         <figcaption>
                             <h2 id="fig-header">    
@@ -133,7 +133,7 @@
                     <figure>  
                         <h2 id="img-header">Mini-Beastie</h2><br>
 
-                        <img src="../images/image03.jpg" alt="Mini-Beastie">
+                        <img src="../images/discord.png" alt="Mini-Beastie">
                         
                         <figcaption>
                             <h2 id="fig-header">    
@@ -150,7 +150,7 @@
                     <figure>
                         <h2 id="img-header">Mini-DJ-Beastie</h2><br>
 
-                        <img src="../images/image03.jpg" alt="Mini-DJ-Beastie">
+                        <img src="../images/discord.png" alt="Mini-DJ-Beastie">
                        
                         <figcaption>
                             <h2 id="fig-header">    
@@ -167,7 +167,7 @@
                     <figure>
                         <h2 id="img-header">Website</h2><br>
 
-                        <img src="../images/image03.jpg" alt="Website">
+                        <img src="../images/website.png" alt="Website">
                         
                         <figcaption>
                             <h2 id="fig-header">    
@@ -226,18 +226,17 @@
             const portfolioImages = document.querySelectorAll('.portfolio-items img');
             const captions = document.querySelectorAll('.portfolio-items figcaption');
 
-            let openIndex = -1; // Track the index of the currently open image, initialize as -1 (no image open)
+            let openIndex = -1;
 
             function toggleVisibility(index) {
                 if (openIndex !== -1 && openIndex !== index) {
-                    // If there's a currently open image and it's not the same as the new one
-                    captions[openIndex].classList.remove('visible'); // Close the previously open image
+                    captions[openIndex].classList.remove('visible');
                 }
 
-                captions[index].classList.toggle('visible'); // Open or close the clicked image
-                openIndex = openIndex === index ? -1 : index; // Update the openIndex
+                captions[index].classList.toggle('visible');
+                openIndex = openIndex === index ? -1 : index;
 
-                const allHidden = openIndex === -1; // Check if no image is open
+                const allHidden = openIndex === -1;
                 portfolioHeader.style.display = allHidden ? 'block' : 'none';
             }
 
