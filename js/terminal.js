@@ -7,8 +7,6 @@ var terminal = document.getElementById("terminal");
 var git = 0;
 var pwSecret = false;
 let pwdSecret = false;
-var pwContact = false;
-let pwdContact = false;
 
 var commands = [];
 
@@ -52,31 +50,6 @@ function enterKey(e) {
       liner.classList.remove("password");
     }
   }   
-  else if (pwContact) {
-    let et = "*";
-    let w = textarea.value.length;
-    command.innerHTML = et.repeat(w);
-    if (textarea.value === passwordContact) {
-      pwdContact = true;
-    }
-    if (pwdContact && e.keyCode == 13) {
-      addLine("Authentication successful.", "success", 0);
-      addLine(" ", 0);
-      loopLines(contact, "", 120);
-      command.innerHTML = "";
-      textarea.value = "";
-      pwdContact = false;
-      pwContact = false;
-      liner.classList.remove("password");
-    } else if (e.keyCode == 13) {
-      addLine("Authentication failed.", "error", 0);
-      addLine(" ", 0);
-      command.innerHTML = "";
-      textarea.value = "";
-      pwContact = false;
-      liner.classList.remove("password");
-    } 
-  }
     else {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
@@ -134,10 +107,10 @@ function commander(cmd) {
       loopLines(portfolio, "margin", 80);
       break;
     case "resume":
-      addLine("Changing directory into Resume...", "margin", 0);
+      addLine("Opening resume...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/files/resume.pdf";
+        window.open("http://127.0.0.1:5501/files/resume.pdf", "_blank");
       }, 1000); 
       break;
     case "history":
@@ -145,8 +118,7 @@ function commander(cmd) {
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
     case "contact":
-      liner.classList.add("password");
-      pwContact = true;
+      loopLines(contact, "margin", 80);
       break;
     case "clear":
       setTimeout(function() {
@@ -158,7 +130,7 @@ function commander(cmd) {
       loopLines(banner, "", 80);
       break;
     case "ls":
-      addLine("<span class=\"index\">Home  Terminal  About  Portfolio  Contact", "error", 0);
+      addLine("<span class=\"index\">Home  About  Portfolio  Resume  Contact  Terminal", "error", 0);
       addLine(" ", 0);
       break;
     case "cd":

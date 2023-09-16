@@ -18,7 +18,7 @@ function typeIt(from, e) {
   e = e || window.event;
   var w = $("typer");
   var tw = from.value;
-  if (!pwSecret && !pwContact) {
+  if (!pwSecret) {
     w.innerHTML = nl2br(tw);
   }
 }
