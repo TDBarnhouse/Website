@@ -20,6 +20,7 @@ $(document).ready(function(){
 
     $("#ABOUT").hide();
     $("#PORTFOLIO").hide();
+    $("#RESUME").hide();
     $("#CONTACT").hide();
     $("#TERMINAL").hide();
 

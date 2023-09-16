@@ -131,7 +131,10 @@ function commander(cmd) {
       pwSecret = true;
       break;
     case "portfolio":
-      loopLines(portfolio, "", 80);
+      loopLines(portfolio, "margin", 80);
+      break;
+    case "resume":
+      loopLines(resume, "margin", 80);
       break;
     case "history":
       loopLines(commands, "margin", 80);
