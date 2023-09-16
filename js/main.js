@@ -14,7 +14,7 @@ setInterval(() => {
     window.updateTitleName()
 }, 500);
 
-$(document).ready(function(){
+$(document).ready(function() {
     let currentPage = "HOME";
     let currentNavLink = $("#navbar-menu").children().first().children()[0];
 
@@ -24,15 +24,17 @@ $(document).ready(function(){
     $("#CONTACT").hide();
     $("#TERMINAL").hide();
 
-    $(".navbar-link").click(function(e){
-        $(`#${currentPage}`).fadeOut(100)
-        $(`#${e.currentTarget.innerHTML}`).fadeIn(500)
+    $(".navbar-link").click(function(e) {
+        if (e.currentTarget.id !== "resume-link") {
+            $(`#${currentPage}`).fadeOut(100)
+            $(`#${e.currentTarget.innerHTML}`).fadeIn(500)
 
-        currentPage = e.currentTarget.innerHTML
+            currentPage = e.currentTarget.innerHTML
 
-        $(currentNavLink).removeClass("selected");
-        $(this).addClass("selected");
-        
-        currentNavLink = this;
+            $(currentNavLink).removeClass("selected");
+            $(this).addClass("selected");
+            
+            currentNavLink = this;
+        }
     })
 });

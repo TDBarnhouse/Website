@@ -143,8 +143,6 @@ nav {
     display: block;
 }
 
-/* Resume */
-
 
 /* Contact */
 form {
@@ -204,6 +202,7 @@ button {
 input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
     top: -35px;
     font-size: 15px;
+    color: red;
 }
 
 button:hover {

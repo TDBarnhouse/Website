@@ -134,7 +134,11 @@ function commander(cmd) {
       loopLines(portfolio, "margin", 80);
       break;
     case "resume":
-      loopLines(resume, "margin", 80);
+      addLine("Changing directory into Resume...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/files/resume.pdf";
+      }, 1000); 
       break;
     case "history":
       loopLines(commands, "margin", 80);
@@ -187,13 +191,6 @@ function commander(cmd) {
         window.location.href = "http://127.0.0.1:5501/";
       }, 1000); 
       break;
-    case "cd terminal":
-      addLine("Changing directory into Terminal...", "margin", 0);
-      addLine(" ", 0);
-      setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
-      }, 1000); 
-      break;
     case "cd about":
       addLine("Changing directory into About...", "margin", 0);
       addLine(" ", 0);
@@ -206,6 +203,13 @@ function commander(cmd) {
       addLine(" ", 0);
       setTimeout(function() {
         window.location.href = "http://127.0.0.1:5501/";
+      }, 1000); 
+      break;
+    case "cd resume":
+      addLine("Changing directory into Resume...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://127.0.0.1:5501/files/resume.pdf";
       }, 1000); 
       break;
     case "cd contact":

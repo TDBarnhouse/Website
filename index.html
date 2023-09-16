@@ -34,7 +34,7 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a class="navbar-link">RESUME</a>
+                    <a class="navbar-link" href="../files/resume.pdf" target="_blank" id="resume-link">RESUME</a>
                 </li>
 
                 <li class="navbar-item">
@@ -236,9 +236,7 @@
         </div>
 
         <div id="RESUME">
-            <div class="center">
 
-            </div>
         </div>
 
         <div id="CONTACT">
@@ -251,7 +249,7 @@
                         </div>
 
                         <div class="input-group">
-                            <input type="text" id="number" required>
+                            <input type="text" id="number" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                             <label for="number"><i class="fas fa-phone-square-alt"></i> PHONE NUMBER</label>
                         </div>
                     </div>
@@ -342,6 +340,5 @@
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
         <script src="js/main.js"></script>
-        <script src="js/navbar.js"></script>
     </body>
 </html>
