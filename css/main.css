@@ -114,6 +114,7 @@ nav {
     border-radius: 50%;
     box-shadow: red 0 0 10px;
     border: 1px solid red;
+    cursor: pointer;
 }
 
 #img-header {
@@ -137,6 +138,12 @@ nav {
 
 .portfolio-items figcaption.visible {
     display: block;
+}
+
+.portfolio-items a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--base-color);
 }
 
 /* Contact */
