@@ -51,22 +51,18 @@ nav {
 #navbar-menu {
     padding-right: 5vh;
     list-style-type: none;
+    line-height: 100px;
 }
   
 .navbar-item {
     display: inline-block;
     margin: 5vh 5vh 0 0;
 }
-  
+
 .navbar-link {
     font-size: 1.5vh;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.2s ease-in;
-    color: var(--base-color);
-}
-
-.navbar-link:visited {
     color: var(--base-color);
 }
 
@@ -118,6 +114,7 @@ nav {
     border-radius: 50%;
     box-shadow: red 0 0 10px;
     border: 1px solid red;
+    cursor: pointer;
 }
 
 #img-header {
@@ -143,11 +140,15 @@ nav {
     display: block;
 }
 
+.portfolio-items a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--base-color);
+}
 
 /* Contact */
 form {
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
 }
 
 .input-group {
@@ -163,6 +164,7 @@ input, textarea {
     color: white;
     background: transparent;
     font-size: 15px;
+    box-sizing: border-box;
 }
 
 label {
@@ -185,8 +187,8 @@ button {
     outline: none;
     background-color: transparent;
     border: 1px solid white;
-    width: 621.5px;
     cursor: pointer;
+    width: 100%;
 }
 
 .row {
@@ -221,7 +223,6 @@ button:hover {
 .social-media-logo {
     color: var(--base-color);
     font-size: 3vh;
-    transition: 0.2s ease-in;
 }
 
 .social-media-item {
@@ -238,33 +239,4 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 48px 0;
-}
-
-@media screen and (max-width: 650px) {
-
-    nav, #nav-top, #navbar-menu, .navbar-link {
-        padding: 0;
-        margin: 0;
-    }
-    
-    #navbar-menu {
-        text-align: center;
-    }
-
-    .navbar-item {
-        margin: 5vh 2vh 0 2vh;
-    }
-
-    footer {
-        padding: 0;
-        margin: 0;
-    }
-
-    #social-media-menu {
-        text-align: center;
-    }
-
-    .social-media-item {
-        margin: 0 2vh 5vh 2vh;
-    }
 }

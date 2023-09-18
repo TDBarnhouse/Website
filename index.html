@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Tristan Barnhouse">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="////"/>
         <link rel="manifest" href="manifest.json">
@@ -15,11 +14,6 @@
 
     <body>
         <nav>
-            <input type="checkbox" id="chk">
-            <label for="chk" class="show-menu-btn">
-                <i class="fas fa-bars"></i>
-            </label>
-
             <ul id="navbar-menu">
                 <li class="navbar-item">
                     <a class="navbar-link selected">HOME</a>
@@ -42,12 +36,8 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a class="navbar-link" href="terminal.html">TERMINAL</a>
+                    <a class="navbar-link" href="terminal.html" target="_blank" id="terminal-link">TERMINAL</a>
                 </li>
-
-                <label for="chk" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
             </ul>
         </nav>
 
@@ -94,9 +84,11 @@
                 <h2 id="portfolio-header">PORTFOLIO</h2>
                 <section class="portfolio-items">  
                     <figure>
-                        <h2 id="img-header">Unleash the Beast</h2><br>
+                        <a href="https://github.com/TDBarnhouse/Unleash-the-Beast" target="_blank">
+                            <h2 id="img-header">Unleash the Beast</h2><br>
+                        </a>
 
-                        <img id="portfolio-image" src="../images/blackops2.png" alt="Unleash the Beast">
+                        <img src="../images/blackops2.png" alt="Unleash the Beast">
                         
                         <figcaption>
                             <h2 id="fig-header">    
@@ -131,7 +123,9 @@
                         </figcaption>
                     </figure>
                     <figure>  
-                        <h2 id="img-header">Mini-Beastie</h2><br>
+                        <a href="https://github.com/TDBarnhouse/Mini-Beastie" target="_blank">
+                            <h2 id="img-header">Mini-Beastie</h2><br>
+                        </a>
 
                         <img src="../images/discord.png" alt="Mini-Beastie">
                         
@@ -162,7 +156,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <h2 id="img-header">Mini-DJ-Beastie</h2><br>
+                        <a href="https://github.com/TDBarnhouse/Mini-DJ-Beastie" target="_blank">
+                            <h2 id="img-header">Mini-DJ-Beastie</h2><br>
+                        </a>
 
                         <img src="../images/discord.png" alt="Mini-DJ-Beastie">
                        
@@ -197,7 +193,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <h2 id="img-header">Website</h2><br>
+                        <a href="https://github.com/TDBarnhouse/Website" target="_blank">
+                            <h2 id="img-header">Website</h2><br>
+                        </a>
 
                         <img src="../images/website.png" alt="Website">
                         
