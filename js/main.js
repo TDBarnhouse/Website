@@ -25,7 +25,7 @@ $(document).ready(function() {
     $("#TERMINAL").hide();
 
     $(".navbar-link").click(function(e) {
-        if (e.currentTarget.id !== "resume-link") {
+        if (e.currentTarget.id !== "resume-link" && e.currentTarget.id !== "terminal-link") {
             $(`#${currentPage}`).fadeOut(100)
             $(`#${e.currentTarget.innerHTML}`).fadeIn(500)
 

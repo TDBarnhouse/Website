@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Tristan Barnhouse">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="////"/>
         <link rel="manifest" href="manifest.json">
@@ -15,11 +14,6 @@
 
     <body>
         <nav>
-            <input type="checkbox" id="chk">
-            <label for="chk" class="show-menu-btn">
-                <i class="fas fa-bars"></i>
-            </label>
-
             <ul id="navbar-menu">
                 <li class="navbar-item">
                     <a class="navbar-link selected">HOME</a>
@@ -42,12 +36,8 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a class="navbar-link" href="terminal.html">TERMINAL</a>
+                    <a class="navbar-link" href="terminal.html" target="_blank" id="resume-link">TERMINAL</a>
                 </li>
-
-                <label for="chk" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
             </ul>
         </nav>
 
@@ -263,7 +253,7 @@
                         <textarea id="message" rows="8" required></textarea>
                         <label for="message"><i class="fas fa-comments"></i> MESSAGE</label>
                     </div>
-
+                    
                     <button type="submit">SUBMIT <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
