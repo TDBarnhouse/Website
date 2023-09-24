@@ -26,7 +26,14 @@ $(document).ready(function() {
 
     $(".navbar-link").click(function(e) {
         if (e.currentTarget.id !== "resume-link" && e.currentTarget.id !== "terminal-link") {
-            $(`#${currentPage}`).fadeOut(100)
+            $(`#${currentPage}`).fadeOut(100, function() {
+                // Remove the 'hide-section' class to show the new page
+                $(`#${currentPage}`).addClass("hide-section");
+                
+                // Show and remove 'hide-section' class for the new page
+                $(`#${e.currentTarget.innerHTML}`).removeClass("hide-section").fadeIn(500);
+            });            
+            
             $(`#${e.currentTarget.innerHTML}`).fadeIn(500)
 
             currentPage = e.currentTarget.innerHTML
