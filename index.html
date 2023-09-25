@@ -242,23 +242,23 @@
                 <form method="post" action="contact.php">
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="name" required>
                             <label for="name"><i class="fas fa-user"></i> NAME</label>
                         </div>
 
                         <div class="input-group">
-                            <input type="text" id="number" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            <input type="text" id="number" name="number" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                             <label for="number"><i class="fas fa-phone-square-alt"></i> PHONE NUMBER</label>
                         </div>
                     </div>
 
                     <div class="input-group">
-                        <input type="text" id="email" required>
+                        <input type="text" id="email" name="email" required>
                         <label for="email"><i class="fas fa-envelope"></i> EMAIL</label>
                     </div>
 
                     <div class="input-group">
-                        <textarea id="message" rows="8" required></textarea>
+                        <textarea id="message" name="message" rows="8" required></textarea>
                         <label for="message"><i class="fas fa-comments"></i> MESSAGE</label>
                     </div>
 
