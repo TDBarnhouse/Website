@@ -26,7 +26,7 @@
         $headers .= "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-        $message_body = '<div style="max-width: 500px;"> <!-- Adjust the max-width as needed -->
+        $message_body = '<div style="max-width: 500px;">
             <table border="1" style="border-collapse: collapse; width: 100%; color: black;">
                 <tr>
                     <td><b>Name:</b></td>
