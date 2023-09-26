@@ -1,20 +1,54 @@
 <?php
+
+    function incrementCounter() {
+        $counterFile = 'counter.txt';
+    
+        $currentCounter = (int) file_get_contents($counterFile);
+    
+        $newCounter = $currentCounter + 1;
+    
+        file_put_contents($counterFile, $newCounter);
+    
+        return $newCounter;
+    }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $subject = "Contact Form Submission";
+        $counterValue = incrementCounter();
+
+        $subject = 'Contact Form Submission #' . $counterValue;
         $name = $_POST["name"];
         $email = $_POST["email"];
         $number = $_POST["number"];
         $message = $_POST["message"];
-
+            
         $to = "itsbeastieboy@gmail.com";
-        $headers = "From: tristanbarnhouse.dev@noreply.com\r\n";
-        // $headers .= "MIME-Version: 1.0" . "\r\n";
-        // $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+        $headers  = "From: <noreply@tristanbarnhouse.dev>\r\n"; 
+        $headers .= "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-        $message_body = "<b>Name:</b> " . $name . "<br>";
-        $message_body .= "<b>Email:</b> " . $email . "<br>";
-        $message_body .= "<b>Phone Number:</b> " . $number . "<br>";
-        $message_body .= "<b>Message:</b><br>" . $message;
+        $message_body = '<div style="max-width: 500px;"> <!-- Adjust the max-width as needed -->
+            <table border="1" style="border-collapse: collapse; width: 100%; color: black;">
+                <tr>
+                    <td><b>Name:</b></td>
+                    <td>' . $name . '</td>
+                </tr>
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>' . $email . '</td>
+                </tr>
+                <tr>
+                    <td><b>Phone Number:</b></td>
+                    <td>' . $number . '</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Message:</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2">' . $message . '</td>
+                </tr>
+            </table>
+        </div>';
+
 
         if (mail($to, $subject, $message_body, $headers)) {
             echo "<p>Your message has been sent successfully.</p>";
