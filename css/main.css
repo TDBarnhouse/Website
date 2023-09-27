@@ -212,6 +212,18 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
     color: red;
 }
 
+input[type="email"]:focus~label, input[type="email"]:not(:placeholder-shown)~label {
+    top: -35px;
+    font-size: 15px;
+    color: red;  
+}
+
+input[type="tel"]:focus~label, input[type="tel"]:not(:placeholder-shown)~label {
+    top: -35px;
+    font-size: 15px;
+    color: red;  
+}
+
 button:hover {
     background-color: white; 
     color: black; 
