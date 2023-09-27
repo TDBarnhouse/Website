@@ -51,11 +51,13 @@
 
 
         if (mail($to, $subject, $message_body, $headers)) {
-            echo "<p>Your message has been sent successfully.</p>";
-        } else {
-            echo "<p>Sorry, there was an error sending your message. Please try again later.</p>";
+            $response = array("success" => true);
+        } 
+        else {
+            $response = array("success" => false);
         }
+        
+        header("Content-Type: application/json");
+        echo json_encode($response);
     }
-
-    // Make it so it stays on the current page but clears all fields with maybe a popup below the submit button stating success for message sent
 ?>
