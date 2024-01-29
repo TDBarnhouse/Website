@@ -191,7 +191,13 @@ function commander(cmd) {
         window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
-    default:
+    case "cd terminal":
+      addLine("Changing directory into Terminal...", "margin", 0);
+      addLine(" ", 0);
+      setTimeout(function() {
+        window.location.href = "http://tristanbarnhouse.dev/terminal.html";
+      }, 1000); 
+      break;    default:
       addLine("<span class=\"index\">Command not found.", "error", 0);
       addLine(" ", 0);
       break;
