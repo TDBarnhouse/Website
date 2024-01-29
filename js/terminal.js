@@ -76,7 +76,6 @@ function enterKey(e) {
   }
 }
 
-
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
