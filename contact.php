@@ -21,7 +21,7 @@
         $number = $_POST["number"];
         $message = $_POST["message"];
             
-        $to = "itsbeastieboy@gmail.com";
+        $to = "td.barnhouse@yahoo.com";
         $headers  = "From: <noreply@tristanbarnhouse.dev>\r\n"; 
         $headers .= "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
