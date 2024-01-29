@@ -1,5 +1,4 @@
 <?php
-
     function incrementCounter() {
         $counterFile = 'counter.txt';
     

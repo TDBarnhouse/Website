@@ -110,7 +110,7 @@ function commander(cmd) {
       addLine("Opening resume...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.open("http://127.0.0.1:5501/files/resume.pdf", "_blank");
+        window.open("http://tristanbarnhouse.dev/content/resume.pdf", "_blank");
       }, 1000); 
       break;
     case "history":
@@ -149,7 +149,7 @@ function commander(cmd) {
       addLine("Closing the tristan.barnhouse framework console...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
+        window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
     case "whois":
@@ -160,35 +160,35 @@ function commander(cmd) {
       addLine("Changing directory into Home...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
+        window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
     case "cd about":
-      addLine("Changing directory into About...", "margin", 0);
+      addLine("Changing directory into Home...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
+        window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
     case "cd portfolio":
-      addLine("Changing directory into Portfolio...", "margin", 0);
+      addLine("Changing directory into Home...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
+        window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
     case "cd resume":
       addLine("Changing directory into Resume...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/files/resume.pdf";
+        window.location.href = "http://tristanbarnhouse.dev/content/resume.pdf";
       }, 1000); 
       break;
     case "cd contact":
-      addLine("Changing directory into Contact...", "margin", 0);
+      addLine("Changing directory into Home...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "http://127.0.0.1:5501/";
+        window.location.href = "http://tristanbarnhouse.dev/";
       }, 1000); 
       break;
     default:
