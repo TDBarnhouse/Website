@@ -197,7 +197,8 @@ function commander(cmd) {
       setTimeout(function() {
         window.location.href = "https://tristanbarnhouse.dev/terminal";
       }, 1000); 
-      break;    default:
+      break;    
+    default:
       addLine("<span class=\"index\">Command not found.", "error", 0);
       addLine(" ", 0);
       break;
