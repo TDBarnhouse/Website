@@ -49,7 +49,6 @@
 
         <div id="ABOUT" class="hide-section">
             <div class="center">
-                <h2 id="about-header">ABOUT</h2>
                 <p id="about-text">    
                     Heyo, I'm Tristan Barnhouse!<br>
                     I am a student currently at Kent State University pursuing my Master's of Science! I
@@ -80,7 +79,6 @@
 
         <div id="PORTFOLIO" class="hide-section">
             <div class="center">
-                <h2 id="portfolio-header">PORTFOLIO</h2>
                 <section class="portfolio-items">  
                     <figure>
                         <a href="https://github.com/TDBarnhouse/Unleash-the-Beast" target="_blank">
@@ -238,7 +236,6 @@
 
         <div id="CONTACT" class="hide-section">
             <div class="center">
-                <h2 id="contact-header">CONTACT</h2>
                 <form method="post" id="contact-form">
                     <div class="row">
                         <div class="input-group">
@@ -308,7 +305,6 @@
         </footer>
 
         <script>
-            const portfolioHeader = document.getElementById('portfolio-header');
             const portfolioImages = document.querySelectorAll('.portfolio-items img');
             const captions = document.querySelectorAll('.portfolio-items figcaption');
 
@@ -323,7 +319,6 @@
                 openIndex = openIndex === index ? -1 : index;
 
                 const allHidden = openIndex === -1;
-                portfolioHeader.style.display = allHidden ? 'block' : 'none';
             }
 
             portfolioImages.forEach((image, index) => {
