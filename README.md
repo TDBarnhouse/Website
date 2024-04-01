@@ -1,4 +1,5 @@
 # Website
-Personal website for my portfolio.
+My personal website for my public portfolio.
 
-Credit to @ForrestKnight for the base of the terminal.
+# Credit
+Acknowledgements to ForrestKnight for the base of the terminal code.
