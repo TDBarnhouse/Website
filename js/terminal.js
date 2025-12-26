@@ -148,7 +148,7 @@ function commander(cmd) {
       addLine("Closing the tristan.barnhouse framework console...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "https://tristanbarnhouse.dev/";
+        window.close();
       }, 1000); 
       break;
     case "whois":
