@@ -157,7 +157,7 @@ startingBanner = [
     "   / __// __// /(_-&lt;/ __// _ `// _ &bsol; _  / _ &bsol;/ _ `// __// _ &bsol; / _ &bsol;/ _ &bsol;/ // /(_-&lt;/ -_)",
     "   &bsol;__//_/  /_//___/&bsol;__/ &bsol;_,_//_//_/(_)/_.__/&bsol;_,_//_/  /_//_//_//_/&bsol;___/&bsol;_,_//___/&bsol;__/",
     "<br>",
-    '<span class="index">x---=====[</span> <span class="color"> tristan.barnhouse v1.5.2-dev </span><span class="index">]=====---x</span>',
+    '<span class="index">x---=====[</span> <span class="color"> tristan.barnhouse v1.5.3-dev </span><span class="index">]=====---x</span>',
     '<span class="index">tristan.barnhouse tip: You can use</span> <span class=\"command\">help</span><span class="index"> to view all available commands.</span>',
     "<br>",
 ];
