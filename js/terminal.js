@@ -109,7 +109,7 @@ function commander(cmd) {
       addLine("Opening resume...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.open("https://tristanbarnhouse.dev/content/resume.pdf", "_blank");
+        window.open("https://tristanbarnhouse.dev/content/files/resume.pdf", "_blank");
       }, 1000); 
       break;
     case "history":
@@ -180,7 +180,7 @@ function commander(cmd) {
       addLine("Changing directory into Resume...", "margin", 0);
       addLine(" ", 0);
       setTimeout(function() {
-        window.location.href = "https://tristanbarnhouse.dev/content/resume.pdf";
+        window.location.href = "https://tristanbarnhouse.dev/content/files/resume.pdf";
       }, 1000); 
       break;
     case "cd contact":
